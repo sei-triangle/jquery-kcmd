@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>kcmd</title>
+</head>
+<body>
+    <label for="txtABC">Input ABC:</label>
+    <input type="text" id="txtABC" placeholder="abc" />
+    <p>
+      or input [↑↑↓↓←→←→BA]
+    </p>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="src/jquery.kcmd.js"></script>
+  <script type="text/javascript">
+  $('#txtABC').knmcmd('abc', function() {
+    alert("OK: input ABC[" + arguments[0] + "," + arguments[1] + "]");
+  }, 99, 'XXX');
+  $(document).knmcmd('↑↑↓↓←→←→BA', function() {
+    alert('KCMD!');
+  });
+  </script>
+</body>
+</html>
