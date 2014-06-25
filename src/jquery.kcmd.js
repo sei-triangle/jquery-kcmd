@@ -1,15 +1,15 @@
 ;(function($) {
 
-  $.fn.knmcmd = function(cmd, func) {
+  $.fn.kcmd = function(cmd, func) {
     var elements = this;
     var args = Array.prototype.slice.call(arguments, 2);
     elements.each(function() {
-      $(this).data('knmcmd', new KnmCmd($(this), cmd, func, args));
+      $(this).data('kcmd', new KCmd($(this), cmd, func, args));
     });
     return this;
   };
 
-  function KnmCmd($elm, cmd, func, args) {
+  function KCmd($elm, cmd, func, args) {
     var self = this,
         charMap = {
           '←': 37, '↑': 38, '→': 39, '↓': 40

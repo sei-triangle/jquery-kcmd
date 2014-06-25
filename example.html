@@ -14,10 +14,10 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="src/jquery.kcmd.js"></script>
   <script type="text/javascript">
-  $('#txtABC').knmcmd('abc', function() {
+  $('#txtABC').kcmd('abc', function() {
     alert("OK: input ABC[" + arguments[0] + "," + arguments[1] + "]");
   }, 99, 'XXX');
-  $(document).knmcmd('↑↑↓↓←→←→BA', function() {
+  $(document).kcmd('↑↑↓↓←→←→BA', function() {
     alert('KCMD!');
   });
   </script>
